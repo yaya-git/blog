@@ -37,3 +37,8 @@ Route::group(array('before' => 'auth'), function()
 });
 
 
+// Para relacionar dos modelos relacionados en las rutas
+
+//Route::resource('lessons.tag', 'LessonsTagsController');
+
+
