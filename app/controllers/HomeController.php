@@ -15,7 +15,12 @@ class HomeController extends BaseController {
                     'total_count' => $posts->getTotal(),
                     'total_pages' => ceil($posts->getTotal() / $posts->getPerPage()),
                     'current_page' => $posts->getCurrentPage(),
-                    'limit' => $posts->getPerPage()
+                    'limit' => $posts->getPerPage(),
+                    'last_page' => $posts->getLastPage(),
+                    'form_page' => $posts->getFrom(),
+                    'get_to' => $posts->getTo(),
+                    'count' => $posts->count(),
+                    'url' => $posts->getUrl(1)
                 )
             ));
 	}

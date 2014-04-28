@@ -16,8 +16,13 @@
 {{ print_r($paginator) }}
 
 
+
 <br>
 <br>
 <br>
+
+
+{{ $posts->links('paginate.pagination') }}
+
 
 @stop
