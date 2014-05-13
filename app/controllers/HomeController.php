@@ -4,24 +4,21 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+            // limite de registros por pagina
+            $limit = Input::get('pagiante',10); 
             
-            $limit = Input::get('limit', 3);
+            // seleccionar registros por fecha
+            $date_default = date('Y-m-d'); 
             
-            $posts = Post::paginate($limit);
+            $date = Input::get('date', '');
+            
+            // selecciona todos los posts
+            $posts = Post::where('created_at', '>', $date)->paginate($limit);
             
             return View::make('home.index',array(
                 'posts' => $posts,
-                'paginator' => array(
-                    'total_count' => $posts->getTotal(),
-                    'total_pages' => ceil($posts->getTotal() / $posts->getPerPage()),
-                    'current_page' => $posts->getCurrentPage(),
-                    'limit' => $posts->getPerPage(),
-                    'last_page' => $posts->getLastPage(),
-                    'form_page' => $posts->getFrom(),
-                    'get_to' => $posts->getTo(),
-                    'count' => $posts->count(),
-                    'url' => $posts->getUrl(1)
-                )
+                'limit' => $limit,
+                'date' => $date
             ));
 	}
 

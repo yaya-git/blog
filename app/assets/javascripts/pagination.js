@@ -1,11 +1,22 @@
-$('.pagina').click(function(e){
-    e.preventDefault();
+
+$('#datetimepicker').datetimepicker({
+    format: 'yyyy-mm-dd',
+    startView: 'decade',
+    minView: 'month' ,
+    language: 'es'   
 });
 
 
-$('#txtPage').on('keypress', function(){
-    $(this).focus();
-    console.log($(this).closest('a').prop('href'));
+if($('#pagination').length > 0)
+{
     
-});
+  $('#sel-paginate').on('change', function(){
+      
+      $('#pagination').submit();
+      
+  });
+    
+}
+
+
 

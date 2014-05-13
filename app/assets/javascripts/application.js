@@ -15,4 +15,5 @@
 //= require additional-methods
 //= require jquery.form
 //= require bootstrap
+//= require datetimepicker
 //= require_tree .
