@@ -8,8 +8,6 @@ class HomeController extends BaseController {
             $limit = Input::get('pagiante',10); 
             
             // seleccionar registros por fecha
-            $date_default = date('Y-m-d'); 
-            
             $date = Input::get('date', '');
             
             // selecciona todos los posts
