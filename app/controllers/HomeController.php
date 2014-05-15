@@ -13,10 +13,14 @@ class HomeController extends BaseController {
             // selecciona todos los posts
             $posts = Post::where('created_at', '>', $date)->paginate($limit);
             
+            // determinar si es una busqueda avanzada
+            $avanzado = (Input::get('avanzado')) ? '1' : '0';
+            
             return View::make('home.index',array(
-                'posts' => $posts,
-                'limit' => $limit,
-                'date' => $date
+                'posts'     => $posts,
+                'limit'     => $limit,
+                'date'      => $date,
+                'avanzado'  => $avanzado
             ));
 	}
 

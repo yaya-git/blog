@@ -1141,7 +1141,7 @@ namespace {
 		 *
 		 * @param InputInterface  $input  An Input instance
 		 * @param OutputInterface $output An Output instance
-		 * @return integer 0 if everything went fine, or an error code
+		 * @return int     0 if everything went fine, or an error code
 		 * @throws \Exception When doRun returns Exception
 		 * @api 
 		 * @static 
@@ -1156,7 +1156,7 @@ namespace {
 		 *
 		 * @param InputInterface  $input  An Input instance
 		 * @param OutputInterface $output An Output instance
-		 * @return integer 0 if everything went fine, or an error code
+		 * @return int     0 if everything went fine, or an error code
 		 * @static 
 		 */
 		 public static function doRun($input, $output){
@@ -1225,7 +1225,7 @@ namespace {
 		/**
 		 * Sets whether to catch exceptions or not during commands execution.
 		 *
-		 * @param Boolean $boolean Whether to catch exceptions or not during commands execution
+		 * @param bool    $boolean Whether to catch exceptions or not during commands execution
 		 * @api 
 		 * @static 
 		 */
@@ -1337,7 +1337,7 @@ namespace {
 		 * Returns true if the command exists, false otherwise.
 		 *
 		 * @param string $name The command name or alias
-		 * @return Boolean true if the command exists, false otherwise
+		 * @return bool    true if the command exists, false otherwise
 		 * @api 
 		 * @static 
 		 */
@@ -1420,7 +1420,7 @@ namespace {
 		 * Returns a text representation of the Application.
 		 *
 		 * @param string  $namespace An optional namespace name
-		 * @param boolean $raw       Whether to return raw command list
+		 * @param bool    $raw       Whether to return raw command list
 		 * @return string A string representing the Application
 		 * @deprecated Deprecated since version 2.3, to be removed in 3.0.
 		 * @static 
@@ -1434,7 +1434,7 @@ namespace {
 		 * Returns an XML representation of the Application.
 		 *
 		 * @param string  $namespace An optional namespace name
-		 * @param Boolean $asDom     Whether to return a DOM or an XML string
+		 * @param bool    $asDom     Whether to return a DOM or an XML string
 		 * @return string|\DOMDocument An XML string representing the Application
 		 * @deprecated Deprecated since version 2.3, to be removed in 3.0.
 		 * @static 
@@ -1460,8 +1460,8 @@ namespace {
 		 * 
 		 * Can be useful to force terminal dimensions for functional tests.
 		 *
-		 * @param integer $width  The width
-		 * @param integer $height The height
+		 * @param int     $width  The width
+		 * @param int     $height The height
 		 * @return Application The current application
 		 * @static 
 		 */
@@ -7020,7 +7020,7 @@ namespace {
 		/**
 		 * Checks whether support for the _method request parameter is enabled.
 		 *
-		 * @return Boolean True when the _method request parameter is enabled, false otherwise
+		 * @return bool    True when the _method request parameter is enabled, false otherwise
 		 * @static 
 		 */
 		 public static function getHttpMethodParameterOverride(){
@@ -7045,7 +7045,7 @@ namespace {
 		 *
 		 * @param string  $key     the key
 		 * @param mixed   $default the default value
-		 * @param Boolean $deep    is parameter deep in multidimensional array
+		 * @param bool    $deep    is parameter deep in multidimensional array
 		 * @return mixed
 		 * @static 
 		 */
@@ -7070,7 +7070,7 @@ namespace {
 		 * Whether the request contains a Session which was started in one of the
 		 * previous requests.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @api 
 		 * @static 
 		 */
@@ -7086,7 +7086,7 @@ namespace {
 		 * like whether the session is started or not. It is just a way to check if this Request
 		 * is associated with a Session instance.
 		 *
-		 * @return Boolean true when the Request contains a Session object, false otherwise
+		 * @return bool    true when the Request contains a Session object, false otherwise
 		 * @api 
 		 * @static 
 		 */
@@ -7376,7 +7376,7 @@ namespace {
 		 * ("SSL_HTTPS" for instance), configure it via "setTrustedHeaderName()" with
 		 * the "client-proto" key.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @api 
 		 * @static 
 		 */
@@ -7572,7 +7572,7 @@ namespace {
 		 * Checks if the request method is of specified type.
 		 *
 		 * @param string $method Uppercase request method (GET, POST etc).
-		 * @return Boolean
+		 * @return bool
 		 * @static 
 		 */
 		 public static function isMethod($method){
@@ -7583,7 +7583,7 @@ namespace {
 		/**
 		 * Checks whether the method is safe or not.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @api 
 		 * @static 
 		 */
@@ -7595,7 +7595,7 @@ namespace {
 		/**
 		 * Returns the request body content.
 		 *
-		 * @param Boolean $asResource If true, a resource will be returned
+		 * @param bool    $asResource If true, a resource will be returned
 		 * @return string|resource The request body content or a resource to read the body stream.
 		 * @throws \LogicException
 		 * @static 
@@ -7619,7 +7619,7 @@ namespace {
 		/**
 		 * 
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @static 
 		 */
 		 public static function isNoCache(){
@@ -7694,7 +7694,7 @@ namespace {
 		 * It is known to work with common JavaScript frameworks:
 		 *
 		 * @link http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
-		 * @return Boolean true if the request is an XMLHttpRequest, false otherwise
+		 * @return bool    true if the request is an XMLHttpRequest, false otherwise
 		 * @api 
 		 * @static 
 		 */
@@ -9822,7 +9822,7 @@ namespace {
 		/**
 		 * Checks whether support for the _method request parameter is enabled.
 		 *
-		 * @return Boolean True when the _method request parameter is enabled, false otherwise
+		 * @return bool    True when the _method request parameter is enabled, false otherwise
 		 * @static 
 		 */
 		 public static function getHttpMethodParameterOverride(){
@@ -9847,7 +9847,7 @@ namespace {
 		 *
 		 * @param string  $key     the key
 		 * @param mixed   $default the default value
-		 * @param Boolean $deep    is parameter deep in multidimensional array
+		 * @param bool    $deep    is parameter deep in multidimensional array
 		 * @return mixed
 		 * @static 
 		 */
@@ -9872,7 +9872,7 @@ namespace {
 		 * Whether the request contains a Session which was started in one of the
 		 * previous requests.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @api 
 		 * @static 
 		 */
@@ -9888,7 +9888,7 @@ namespace {
 		 * like whether the session is started or not. It is just a way to check if this Request
 		 * is associated with a Session instance.
 		 *
-		 * @return Boolean true when the Request contains a Session object, false otherwise
+		 * @return bool    true when the Request contains a Session object, false otherwise
 		 * @api 
 		 * @static 
 		 */
@@ -10178,7 +10178,7 @@ namespace {
 		 * ("SSL_HTTPS" for instance), configure it via "setTrustedHeaderName()" with
 		 * the "client-proto" key.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @api 
 		 * @static 
 		 */
@@ -10374,7 +10374,7 @@ namespace {
 		 * Checks if the request method is of specified type.
 		 *
 		 * @param string $method Uppercase request method (GET, POST etc).
-		 * @return Boolean
+		 * @return bool
 		 * @static 
 		 */
 		 public static function isMethod($method){
@@ -10385,7 +10385,7 @@ namespace {
 		/**
 		 * Checks whether the method is safe or not.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @api 
 		 * @static 
 		 */
@@ -10397,7 +10397,7 @@ namespace {
 		/**
 		 * Returns the request body content.
 		 *
-		 * @param Boolean $asResource If true, a resource will be returned
+		 * @param bool    $asResource If true, a resource will be returned
 		 * @return string|resource The request body content or a resource to read the body stream.
 		 * @throws \LogicException
 		 * @static 
@@ -10421,7 +10421,7 @@ namespace {
 		/**
 		 * 
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @static 
 		 */
 		 public static function isNoCache(){
@@ -10496,7 +10496,7 @@ namespace {
 		 * It is known to work with common JavaScript frameworks:
 		 *
 		 * @link http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
-		 * @return Boolean true if the request is an XMLHttpRequest, false otherwise
+		 * @return bool    true if the request is an XMLHttpRequest, false otherwise
 		 * @api 
 		 * @static 
 		 */
@@ -11347,7 +11347,7 @@ namespace {
 		/**
 		 * Starts the session storage.
 		 *
-		 * @return Boolean True if session started.
+		 * @return bool    True if session started.
 		 * @throws \RuntimeException If session fails to start.
 		 * @api 
 		 * @static 
@@ -11411,11 +11411,11 @@ namespace {
 		 * Clears all session attributes and flashes and regenerates the
 		 * session and deletes the old session from persistence.
 		 *
-		 * @param integer $lifetime Sets the cookie lifetime for the session cookie. A null value
+		 * @param int     $lifetime Sets the cookie lifetime for the session cookie. A null value
 		 *                          will leave the system settings unchanged, 0 sets the cookie
 		 *                          to expire with browser session. Time is in seconds, and is
 		 *                          not a Unix timestamp.
-		 * @return Boolean True if session invalidated, false if error.
+		 * @return bool    True if session invalidated, false if error.
 		 * @api 
 		 * @static 
 		 */
@@ -11428,12 +11428,12 @@ namespace {
 		 * Migrates the current session to a new session id while maintaining all
 		 * session attributes.
 		 *
-		 * @param Boolean $destroy  Whether to delete the old session or leave it to garbage collection.
-		 * @param integer $lifetime Sets the cookie lifetime for the session cookie. A null value
+		 * @param bool    $destroy  Whether to delete the old session or leave it to garbage collection.
+		 * @param int     $lifetime Sets the cookie lifetime for the session cookie. A null value
 		 *                          will leave the system settings unchanged, 0 sets the cookie
 		 *                          to expire with browser session. Time is in seconds, and is
 		 *                          not a Unix timestamp.
-		 * @return Boolean True if session migrated, false if error.
+		 * @return bool    True if session migrated, false if error.
 		 * @api 
 		 * @static 
 		 */
@@ -11483,7 +11483,7 @@ namespace {
 		 * Checks if an attribute is defined.
 		 *
 		 * @param string $name The attribute name
-		 * @return Boolean true if the attribute is defined, false otherwise
+		 * @return bool    true if the attribute is defined, false otherwise
 		 * @api 
 		 * @static 
 		 */
@@ -11691,7 +11691,7 @@ namespace {
 		/**
 		 * Checks if the session was started.
 		 *
-		 * @return Boolean
+		 * @return bool
 		 * @static 
 		 */
 		 public static function isStarted(){

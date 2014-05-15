@@ -3,9 +3,36 @@
 @section('content')
 
 {{ Form::open(array('url' => '/', 'method' => 'get', 'id'=> 'pagination')) }}
-    <div class="pull-right">
-        {{ Form::text('date', $date, array('id' => 'datetimepicker')) }}
-        {{ Form::submit('Buscar') }}
+    <div class="row">
+        
+        <div class="col-md-3">
+            <div class="form-group">
+                {{ Form::label('Fecha') }}
+                {{ Form::text('date', $date, array('id' => 'datetimepicker', 'class' => 'form-control')) }}                
+            </div>
+        </div> 
+        
+        <div class="col-md-1">
+            <div class="form-group">
+                <label>&nbsp;</label>
+                {{ Form::submit('Buscar', array('class' => 'btn btn-default')) }}  
+            </div>            
+        </div>
+        
+        <div class="col-md-8">
+            <div class="form-group pull-right">
+                {{ link_to('#', 'Busqueda avanzada', array('id' => 'btn-search')) }}
+            </div>            
+        </div>
+        
+    </div>
+
+    <div class="row">
+        <div  class="advanceSearch" style="{{ ($avanzado) ? '' : 'display:none;' }}">
+
+            @include('search.search')
+
+        </div>    
     </div>
 
     <div class="row">
